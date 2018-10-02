@@ -1,5 +1,4 @@
 package servlet;
-
 import Models.Token;
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -8,8 +7,6 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-
 
 
 @WebServlet(name = "login", urlPatterns = {"/login"})
@@ -23,7 +20,7 @@ public class login extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        if (username.equals("abc") && password.equals("123")) {
+        if (username.equals("admin") && password.equals("admin")) {
 
             Cookie[] cookies = request.getCookies();
             if (cookies != null) {
@@ -32,7 +29,6 @@ public class login extends HttpServlet {
 
                         // set session id
                         tkn.setSesssion(cookie.getValue());
-
                     }
                 }
             }

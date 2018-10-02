@@ -69,7 +69,6 @@
                 document.getElementById("hidden_input").value = cookieArray[i].split('=')[1];
             }
         }
-        
     }
 </script>
  

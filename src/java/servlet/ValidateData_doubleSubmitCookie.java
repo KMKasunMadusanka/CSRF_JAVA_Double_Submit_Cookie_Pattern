@@ -1,5 +1,4 @@
 package servlet;
-
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -29,16 +28,9 @@ public class ValidateData_doubleSubmitCookie extends HttpServlet {
                     } else {
                         session.setAttribute("result_value", "Your responce is recoded but not ensured with CSRF");
                     }
-
                 }
             }
             response.sendRedirect("result.jsp");
         }
     }
-
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
-
 }
